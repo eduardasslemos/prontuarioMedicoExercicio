@@ -11,10 +11,12 @@ export class Prontuario{
     }
 
     exibirProntuario(): void{
-        console.log(`Paciente: ${this.paciente.pessoa.nome} \nMédico: ${this.medico.pessoa.nome} \nLista de remédios: `,
-            this.paciente.remedios.forEach(r => {
-                console.log (`${r.nome}`);
-            }
-        )
+        console.log(`Paciente: ${this.paciente.pessoa.nome}`);
+        console.log(`Médico: ${this.medico.pessoa.nome}`);
+        console.log(`Lista de remédios: `);
+
+        this.paciente.remedios.forEach(r => {
+            console.log(`${r.nome}`);
+        })
     }
 }
